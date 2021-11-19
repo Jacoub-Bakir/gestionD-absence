@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="accueilStyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="2-Logo.ico" />
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <img class="NTIC" src="NTIC-Logo.gif" alt="">
+    </header>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="container__sidebar">
+            <div class="menuSections active">
+                <div class="before"></div>
+                <h2 class="title">Mon Profile</h2> 
+                <div class="after"></div>               
+            </div>
+            <div class="menuSections">
+                <div class="before"></div>
+                <h2 class="title">Liste Des Utilisateurs</h2>
+                <div class="after"></div>                  
+            </div>
+            <div class="menuSections">
+                <div class="before"></div>
+                <h2 class="title">Ajouter Un Utilisateur</h2>
+                <div class="after"></div>                 
+            </div>
+            <div class="menuSections ">
+                <div class="before"></div>
+                <h2 class="title">Modifier Un Utilisateur</h2>
+                <div class="after"></div>                
+            </div>
+            <div class="menuSections">
+                <div class="before"></div>
+                <h2 class="title">Supprimer Un Utilisateur</h2>
+                <div class="after"></div>
+            </div>
+        </aside>
+    
+        <!-- Main -->
+        <main class="container__main">
+            <section class="main__section">
+                <div class='Section ' >
+                    <form class="profile" action="#" autocomplete="off">
+                        <h3 class="sectionTitle">Votre Profile</h3>
+                        <div class="input-container">
+                            <label for="">Username :</label>
+                            <input type="text" name="username" class="input" placeholder="Utilisateur 1" disabled/>
+                        </div>
+                        <div class="input-container">
+                            <label for="">Nom :</label>
+                            <input type="text" name="name" class="input" placeholder="Nom d'utilisateur" disabled />
+                        </div>
+                        <div class="input-container">
+                            <label for="">Prénom :</label>
+                            <input type="text" name="name" class="input" placeholder="Prénom d'utilisateur" disabled/>
+                        </div>
+                        <div class="input-container">
+                            <label for="">Email  :</label>
+                            <input type="email" name="email" class="input" placeholder="Email d'utilisateur" disabled/>
+                        </div>
+                        <div class="input-container">
+                            <label for="">Level  :</label>
+                            <input type="text" name="level" class="input" placeholder="Level" />
+                        </div>
+                        <div class="input-container">
+                            <label for="">Phone :</label>
+                            <input type="tel" name="phone" class="input" placeholder="numéro de telephone" disabled/>
+                        </div>
+                        <div class="buttons">
+                            <input type="submit" value="Modifier" class="btn" />
+                            <input type="submit" value="Enregistrer" class="btn" />
+                        </div>
+                        
+                    </form>
+                </div>
+
+                <div class="Section">
+                    <h3 class="sectionTitle">Listes Des Utilisateurs</h3>
+                    <table id="tableUtilisateur">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Prénom</th>
+                                <th>Nom</th>
+                                <th>L'année</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Thibaut </td>
+                                <td>Courtois</td>
+                                <td>L2</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Daniel  </td>
+                                <td>Carvajal</td>
+                                <td>M1</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Éder </td>
+                                <td>Gabriel Militão</td>
+                                <td>L1</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>David </td>
+                                <td>Alaba</td>
+                                <td>L3</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Marcelo </td>
+                                <td>Vieira da Silva</td>
+                                <td>M2</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Toni</td>
+                                <td>Kroos</td>
+                                <td>M1</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Eden </td>
+                                <td>Hazard</td>
+                                <td>L3</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Luka </td>
+                                <td>Modric</td>
+                                <td>L2</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Karim</td>
+                                <td>Benzema</td>
+                                <td>L1</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Federico Santiago </td>
+                                <td>Valverde Dipetta</td>
+                                <td>L3</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Vinicius </td>
+                                <td>Paixao de Oliveira Junior</td>
+                                <td>M1</td>
+                            </tr>
+                        </tbody>
+            
+                    </table>
+                </div>
+
+                <div class="Section ">
+                    <form class="ajoute" autocomplete="off" onsubmit="ajouter(this); return false">
+                        <h3 class="sectionTitle">Ajouter Un Utilisateur</h3>
+                        
+                        <div class="input-container">
+                            <label for="">Nom :</label>
+                            <input type="text" name="name" class="input" placeholder="Nom"  />
+                        </div>
+                        <div class="input-container">
+                            <label for="">Prénom :</label>
+                            <input type="text" name="prenom" class="input" placeholder="Prénom" />
+                        </div>
+                        <div class="input-container">
+                            <label for="">Email  :</label>
+                            <input type="email" name="email" class="input" placeholder="Email" />
+                        </div>
+                        <div class="input-container">
+                            <label for="">Level  :</label>
+                            <input type="text" name="level" class="input" placeholder="Level" />
+                        </div>
+                        <div class="input-container">
+                            <label for="">Mot de passe :</label>
+                            <input type="password" name="username" class="input" placeholder="Mot de passe" />
+                        </div>
+                        <div class="input-container">
+                            <label for="">Confirmer votre mot de passe :</label>
+                            <input type="password" name="username" class="input" placeholder="Confirmer votre mot de passe" />
+                        </div>
+                        <div class="input-container">
+                            <label for="">Phone :</label>
+                            <input type="tel" name="phone" class="input" placeholder="Phone" />
+                        </div>
+                        <div class="buttons">
+                            <input type="button" value="Annuler" class="btn" />
+                            <input type="submit" value="Ajouter" class="btn" />
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="Section">
+                    <form class="modifier" action="#" autocomplete="off" onsubmit="modifier()">
+                        <h3 class="sectionTitle">Modifier Un Utilisateur</h3>
+                        <div class="input-container">
+                            <label for="">Utilisateur :</label>
+                            <div class="custom_select">
+                                <select name="Utilisateur" id="modifierUtilisateur" onchange= "update_txt(this)">
+                                    <option  data-nom="Nom" data-prenom="Prénom" 
+                                    data-email="Email" data-level="Level" data-phone="Numéro Telephone">Selectionné un utilisateur</option>
+                                    <option value="Thibaut.Courtois" data-nom="Courtois" data-prenom="Thibaut" 
+                                    data-email="Thibaut Email" data-level="L2" data-phone="Thibaut Numéro Telephone">Thibaut Courtois</option>
+                                    
+                                    <option value="Daniel.Carvajal" data-nom="Carvajal" data-prenom="Daniel" 
+                                    data-email="Daniel Email" data-level="M1" data-phone="Daniel Numéro telephone">Daniel Carvajal</option>
+                                    
+                                    <option value="Éder.Militão" data-nom="Militão" data-prenom="Éder Gabriel" 
+                                    data-email="Éder Email" data-level="L1" data-phone="Éder Numéro Telephone">Éder Militão</option>
+                                    
+                                    <option value="David.Alaba" data-nom="Alaba" data-prenom="David" 
+                                    data-email="David Email" data-level="L3" data-phone="David Numéro Telephone">David Alaba</option>
+                                    
+                                    <option value="Marcelo.Vieira" data-nom="Marcelo" data-prenom="Vieira da Silva" 
+                                    data-email="Marcelo Email" data-level="M2" data-phone="Marcelo Numéro Telephone">Marcelo Vieira</option>
+                                    
+                                    <option value="Toni.Kroos" data-nom="Kroos" data-prenom="Toni" 
+                                    data-email="Toni Email" data-level="M1" data-phone="Toni Numéro Telephone">Toni Kroos</option>
+                                    
+                                    <option value="Eden.Hazard" data-nom="Hazard" data-prenom="Eden" 
+                                    data-email="Eden Email" data-level="L3" data-phone="Eden Numéro Telephone">Eden Hazard</option>
+                                    
+                                    <option value="Luka.Modric" data-nom="Modric" data-prenom="Luka" 
+                                    data-email="Luka Email" data-level="L2" data-phone="Luka Numéro Telephone">Luka Modric</option>
+                                    
+                                    <option value="Karim.Benzema" data-nom="Benzema" data-prenom="Karim" 
+                                    data-email="Karim Email" data-level="L1" data-phone="Karim Numéro Telephone">Karim Benzema</option>
+                                    
+                                    <option value="Federico.Valverde" data-nom="Valverde" data-prenom="Federico" 
+                                    data-email="Federico Email" data-level="L3" data-phone="Federico Numéro Telephone">Federico Valverde</option>
+                                    
+                                    <option value="Vinicius.Junior" data-nom="Vinicius" data-prenom="Junior" 
+                                    data-email="Junior Email" data-level="M1" data-phone="Junior Numéro Telephone">Vinicius Junior</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <label for="">Nom :</label>
+                            <input id="nom" type="text" name="name" class="input" placeholder="Nom" unable />
+                        </div>
+                        <div class="input-container">
+                            <label for="">Prénom :</label>
+                            <input id="prenom" type="text" name="name" class="input" placeholder="Prénom" />
+                        </div>
+                        <div class="input-container">
+                            <label for="">Email  :</label>
+                            <input id="email" type="email" name="email" class="input" placeholder="Email" />
+                        </div>
+                        <div class="input-container">
+                            <label for="">Level  :</label>
+                            <input id="level" type="text" name="level" class="input" placeholder="Level" />
+                        </div>
+                        <div class="input-container">
+                            <label for="">Mot de passe :</label>
+                            <input  type="password" name="username" class="input" placeholder="Entrer Le Mot de passe" />
+                        </div>
+                        
+                        <div class="input-container">
+                            <label for="">Phone :</label>
+                            <input id="phone" type="tel" name="phone" class="input" placeholder="Phone" />
+                        </div>
+                        <div class="buttons">
+                            <input type="submit" value="Annuler" class="btn" />
+                            <input type="submit" value="Modifier" class="btn" />
+                        </div>
+                    </form>
+                </div>
+
+                <div class="Section">
+                    <form class="supprimer" action="#" autocomplete="off" onsubmit="supprimer()">
+                        <h3 class="sectionTitle">Supprimer Un Utilisateur</h3>
+                        <div class="input-container">
+                            <label for="">Utilisateur :</label>
+                            <div class="custom_select">
+                                
+                                <select name="Utilisateur" id="supprimerUtilisateur" >
+                                    <option  data-nom="Nom" data-prenom="Prénom" 
+                                    data-email="Email" data-phone="Numéro Telephone">Selectionné un utilisateur</option>
+                                    <option value="Thibaut.Courtois" data-nom="Courtois" data-prenom="Thibaut" 
+                                    data-email="Thibaut Email" data-phone="Thibaut Numéro Telephone">Thibaut Courtois</option>
+                                    
+                                    <option value="Daniel.Carvajal" data-nom="Carvajal" data-prenom="Daniel" 
+                                    data-email="Daniel Email" data-phone="Daniel Numéro telephone">Daniel Carvajal</option>
+                                    
+                                    <option value="Éder.Militão" data-nom="Militão" data-prenom="Éder Gabriel" 
+                                    data-email="Éder Email" data-phone="Éder Numéro Telephone">Éder Militão</option>
+                                    
+                                    <option value="David.Alaba" data-nom="Alaba" data-prenom="David" 
+                                    data-email="David Email" data-phone="David Numéro Telephone">David Alaba</option>
+                                    
+                                    <option value="Marcelo.Vieira" data-nom="Marcelo" data-prenom="Vieira da Silva" 
+                                    data-email="Marcelo Email" data-phone="Marcelo Numéro Telephone">Marcelo Vieira</option>
+                                    
+                                    <option value="Toni.Kroos" data-nom="Kroos" data-prenom="Toni" 
+                                    data-email="Toni Email" data-phone="Toni Numéro Telephone">Toni Kroos</option>
+                                    
+                                    <option value="Eden.Hazard" data-nom="Hazard" data-prenom="Eden" 
+                                    data-email="Eden Email" data-phone="Eden Numéro Telephone">Eden Hazard</option>
+                                    
+                                    <option value="Luka.Modric" data-nom="Modric" data-prenom="Luka" 
+                                    data-email="Luka Email" data-phone="Luka Numéro Telephone">Luka Modric</option>
+                                    
+                                    <option value="Karim.Benzema" data-nom="Benzema" data-prenom="Karim" 
+                                    data-email="Karim Email" data-phone="Karim Numéro Telephone">Karim Benzema</option>
+                                    
+                                    <option value="Federico.Valverde" data-nom="Valverde" data-prenom="Federico" 
+                                    data-email="Federico Email" data-phone="Federico Numéro Telephone">Federico Valverde</option>
+                                    
+                                    <option value="Vinicius.Junior" data-nom="Vinicius" data-prenom="Junior" 
+                                    data-email="Junior Email" data-phone="Junior Numéro Telephone">Vinicius Junior</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <label for="">Email :</label>
+                            <input id="email" type="email" name="email" class="input" placeholder="Entrer L'Email d'utilisateur " />
+                        </div>
+                        <div class="input-container">
+                            <label for="">Mot de passe :</label>
+                            <input  type="password" name="username" class="input" placeholder="Entrer Le Mot de passe d'utilisateur" />
+                        </div>
+                        
+                        <div class="input-container">
+                            <label for="">Votre Mot de passe :</label>
+                            <input  type="password" name="username" class="input" placeholder="Entrer votre Mot de passe" />
+                        </div>
+                        <div class="buttons">
+                            <input type="submit" value="Annuler" class="btn" />
+                            <input type="submit" value="Supprimer" class="btn" />
+                        </div>
+                    </form>
+                </div>
+            </section>
+		    <canvas class="background"></canvas>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="background.js"></script>
+</body>
+</html>
